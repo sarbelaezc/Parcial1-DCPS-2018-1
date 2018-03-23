@@ -1,0 +1,23 @@
+.header{
+  color: #0B610B;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.actionDoed{
+  background-color: #d4edda;
+}
+
+.actionTodo{
+  background-color: #fff3cd;
+}
+
+.doed{
+  font-size: 12px;
+  background-color: #d4edda;
+}
+
+.todo{
+  font-size: 12px;
+  background-color: #fff3cd;
+}

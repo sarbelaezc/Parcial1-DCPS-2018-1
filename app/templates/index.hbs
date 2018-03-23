@@ -1,0 +1,34 @@
+<header class='header'>
+  <h1>Parcial 1 DCPS 2018-1</h1>
+</header>
+
+{{#each model.todoList as |todoList|}}
+  {{#if todoList.isReady}}
+    <p>
+      <div class='actionDoed'>
+        {{todoList.action}}
+      </div>
+      <div class='doed'>
+        Hecho
+        <button type="button" {{action 'changeIsReady' todoList.action}}>Marcar como sin hacer</button>
+      </div>
+    </p>
+  {{else}}
+    <p>
+      <div class='actionTodo'>
+        {{todoList.action}}
+      </div>
+      <div class='todo'>
+        Por hacer
+        <button type="button" {{action 'changeIsReady' todoList.action}}>¡Lo he hecho!</button>
+      </div>
+    </p>
+  {{/if}}
+{{/each}}
+
+<p>
+  {{input type='text' min='20' max='100' value=newTodo}}
+  <button type='button' {{action 'insertTodo' newTodo}}>Añadir</button>
+</p>
+
+{{outlet}}
