@@ -4,7 +4,7 @@ export default Controller.extend({
   actions:{
     insertTodo(newTodo){
       if(newTodo.length <20 | newTodo.length >100){
-        console.log('errcor');
+        console.log('error');
       }else{
         this.get('model.todoList').pushObject({action: this.newTodo,
                                                isReady: false
